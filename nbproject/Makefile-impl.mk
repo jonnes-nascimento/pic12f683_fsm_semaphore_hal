@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=fsm_semaphore_hal
+PROJECTNAME=pic12f683_fsm_semaphore_hal
 
 # Active Configuration
 DEFAULTCONF=default
