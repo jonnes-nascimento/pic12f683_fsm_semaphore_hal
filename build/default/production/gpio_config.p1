@@ -1,0 +1,83 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"3 gpio_config.c
+[; ;gpio_config.c: 3: static const GpioConfig_t GpioConfig[] = {
+[c E13 0 1 2 3 4 5 6 .. ]
+[n E13 . CHANNEL_GP0 CHANNEL_GP1 CHANNEL_GP2 CHANNEL_GP3 CHANNEL_GP4 CHANNEL_GP5 GPIO_MAX_PIN_NUMBER  ]
+[c E26 0 1 2 3 4 5 .. ]
+[n E26 . GPIO_PIN_FUNCTION_DIGITAL GPIO_PIN_FUNCTION_ANALOG GPIO_PIN_FUNCTION_COMPARATOR GPIO_PIN_FUNCTION_TIMER GPIO_PIN_FUNCTION_CAPTURE_COMPARE GPIO_PIN_FUNCTION_INTERRUPT  ]
+[c E22 0 1 .. ]
+[n E22 . GPIO_PIN_DIRECTION_OUTPUT GPIO_PIN_DIRECTION_INPUT  ]
+[c E34 0 1 .. ]
+[n E34 . GPIO_PIN_PULLUP_DISABLED GPIO_PIN_PULLUP_ENABLED  ]
+[c E42 0 1 2 .. ]
+[n E42 . GPIO_PIN_STATE_LOW GPIO_PIN_STATE_HIGH GPIO_PIN_MAX_STATES  ]
+"70 ./gpio_config.h
+[; ;./gpio_config.h: 70: {
+[s S2 `E13 1 `E26 1 `E22 1 `E34 1 `E42 1 ]
+[n S2 . Channel Function Direction PullUp State ]
+"3 gpio_config.c
+[; ;gpio_config.c: 3: static const GpioConfig_t GpioConfig[] = {
+[v _GpioConfig `CS2 ~T0 @X0 -> 6 `i s ]
+[i _GpioConfig
+:U ..
+:U ..
+. `E13 0
+. `E26 0
+. `E22 0
+. `E34 0
+. `E42 1
+..
+:U ..
+. `E13 1
+. `E26 0
+. `E22 1
+. `E34 0
+. `E42 0
+..
+:U ..
+. `E13 2
+. `E26 0
+. `E22 0
+. `E34 0
+. `E42 1
+..
+:U ..
+. `E13 3
+. `E26 0
+. `E22 1
+. `E34 0
+. `E42 0
+..
+:U ..
+. `E13 4
+. `E26 0
+. `E22 0
+. `E34 0
+. `E42 1
+..
+:U ..
+. `E13 5
+. `E26 0
+. `E22 0
+. `E34 0
+. `E42 1
+..
+..
+]
+[v F58 `*CS2 ~T0 @X0 1 t ]
+"12
+[; ;gpio_config.c: 12: const GpioConfig_t * const GpioConfigGet(void)
+[v _GpioConfigGet `(C*CS2 ~T0 @X0 1 e ]
+"13
+[; ;gpio_config.c: 13: {
+{
+[e :U _GpioConfigGet ]
+[f ]
+"14
+[; ;gpio_config.c: 14:     return (const GpioConfig_t *) &GpioConfig[0];
+[e ) &U *U + &U _GpioConfig * -> -> -> 0 `i `ui `ux -> -> # *U &U _GpioConfig `ui `ux ]
+[e $UE 3  ]
+"15
+[; ;gpio_config.c: 15: }
+[e :UE 3 ]
+}
