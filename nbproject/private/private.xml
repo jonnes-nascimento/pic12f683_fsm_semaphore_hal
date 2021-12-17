@@ -3,11 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/projects/PIC/tests/12F683/fsm_semaphore_hal/main.c</file>
-            <file>file:/D:/projects/PIC/tests/12F683/fsm_semaphore_hal/gpio.c</file>
-            <file>file:/D:/projects/PIC/tests/12F683/fsm_semaphore_hal/gpio.h</file>
-            <file>file:/D:/projects/PIC/tests/12F683/fsm_semaphore_hal/gpio_config.h</file>
-            <file>file:/D:/projects/PIC/tests/12F683/fsm_semaphore_hal/pic12f683.h</file>
+            <file>file:/D:/projects/PIC/pic12f683_fsm_semaphore_hal/main.c</file>
+            <file>file:/D:/projects/PIC/pic12f683_fsm_semaphore_hal/gpio.c</file>
         </group>
     </open-files>
 </project-private>
