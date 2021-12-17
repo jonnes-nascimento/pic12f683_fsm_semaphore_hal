@@ -63,10 +63,10 @@ typedef struct sState
 } State;
 
 const State FSM[4] = {
-    [ST_VERDE]    = { LED_VERDE,    3000, {ST_AMARELO,  ST_AMARELO} },
-    [ST_AMARELO]  = { LED_AMARELO,  1000, {ST_VERMELHO, ST_APAGADO} },
-    [ST_VERMELHO] = { LED_VERMELHO, 3000, {ST_VERDE,    ST_AMARELO} },
-    [ST_APAGADO]  = { LED_APAGADO,  1000, {ST_AMARELO,  ST_AMARELO} }
+    [ST_VERDE]    = { LED_VERDE,    1500, {ST_AMARELO,  ST_AMARELO} },
+    [ST_AMARELO]  = { LED_AMARELO,  500, {ST_VERMELHO, ST_APAGADO} },
+    [ST_VERMELHO] = { LED_VERMELHO, 1500, {ST_VERDE,    ST_AMARELO} },
+    [ST_APAGADO]  = { LED_APAGADO,  500, {ST_AMARELO,  ST_AMARELO} }
 };
 
 
@@ -90,10 +90,12 @@ void main(void)
     Gpio_Init(config);
     
     uint8_t estado = 0;
+    GpioPort_t port;
     
     while(1)
     {
-        Gpio_Write_Byte(FSM[estado].saida);
+        port.Byte = FSM[estado].saida;
+        Gpio_Write_Register(port);
         
         delay_ms(FSM[estado].tempo);
         
