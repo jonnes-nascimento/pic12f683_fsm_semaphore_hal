@@ -11,7 +11,7 @@ typedef enum
     NUMBER_OF_PORTS
 } Port_t;
 
-typedef struct
+typedef union
 {
     uint8_t Byte;        /**< Gpio port byte */
 
