@@ -2,9 +2,14 @@
 #define _GPIO_CFG_H_
 
 #define ARCH_ADDR_SIZE  unsigned char
-#define NUMBER_OF_PORTS 1u
 
 typedef unsigned char uint8_t;
+
+typedef enum
+{
+    GPIO_PORT,
+    NUMBER_OF_PORTS
+} Port_t;
 
 typedef struct
 {

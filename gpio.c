@@ -71,5 +71,5 @@ void Gpio_Init(const GpioConfig_t * const Config)
 
 void Gpio_Write_Byte(uint8_t byte)
 {
-    *GpioPort[0] = byte;
+    *GpioPort[GPIO_PORT] = byte;
 }
